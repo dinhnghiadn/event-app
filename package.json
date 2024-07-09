@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -w src --ext ts --exec ts-node src/main.ts",
-    "test": "jest",
+    "test": "jest --forceExit",
     "typeorm": "typeorm-ts-node-esm -d ./src/database/db.ts",
     "migration:run": "typeorm-ts-node-esm -d ./src/database/db.ts migration:run",
     "migration:create": "typeorm-ts-node-commonjs migration:create",
