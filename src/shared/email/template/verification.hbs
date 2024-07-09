@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        Welcome to Event application!
+    </div>
+    <div class="content">
+        <p style="color: black;">Hi {{email}}, thank you for signing up for Event app. To verify your email address and activate your account, please click <a href={{url}}>here</a>:</p>
+        <p style="color: black;">This url is valid for 1 hour. If you did not request this email or if the url has expired, please request a new url from the app.</p>
+        <p style="color: black;">Sincerely,</p>
+        <p style="color: black;">The Event app Team</p>
+    </div>
+    <div class="footer">
+        &copy; 2024 . All rights reserved.
+    </div>
+</div>
+</body>
+</html>
