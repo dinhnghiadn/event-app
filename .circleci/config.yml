@@ -1,0 +1,27 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      - image: circleci/node:18.15.0
+
+    working_directory: ~/todo-typescript
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-
+
+      - run: npm run test
