@@ -1,7 +1,5 @@
 import 'dotenv/config';
 import express, { Express, NextFunction, Request, Response } from 'express';
-// import { wrap } from './utils/shared/wrap';
-// import { sessionMiddleware } from './utils/common/session';
 import path from 'path';
 import {databaseConnection, DatabaseConnection} from "./database/db";
 import {wrap} from "./shared/wrapper/wrap";
@@ -34,5 +32,5 @@ databaseConnection
         });
     })
     .catch((e) => {
-        logger.error('Error during Data Source initialization', e);
+        logger.error('Error during application initialization', e);
     });
